@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE manifest SYSTEM "https://raw.githubusercontent.com/CoSSeDevelopmentTeam/CPhone/master/CPhoneManifest.dtd">-->
+
+<manifest>
+    <application>
+        <title>Wallet</title>
+        <description>お金関連のアプリ</description>
+        <author>popkechupki</author>
+        <version>1.0.0</version>
+        <mcbeversion>1.7</mcbeversion>
+        <icon>https://google.co.jp/</icon>
+    </application>
+
+    <permission type = "default" />
+
+    <activity>
+        <name>MainActivity</name>
+        <main>net.comorevi.cpapp.wallet.MainActivity</main>
+    </activity>
+</manifest>
