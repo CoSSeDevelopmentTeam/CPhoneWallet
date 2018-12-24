@@ -7,6 +7,7 @@
   <string name="button_home3">お金を付与(OP only)</string>
   <string name="button_home4">お金を没収(OP only)</string>
   <string name="button_home5">所持金を再設定(OP only)</string>
+  <string name="button_home6">アカウント設定</string>
 
   <!-- PayMoneyActivity -->
   <string name="title_pay">Wallet - 送金・支払い</string>
@@ -45,6 +46,11 @@
   <string name="label_set_dropdown">対象プレイヤーを選択</string>
   <string name="label_set_input">金額</string>
   <string name="set_input_placeholder">新しい所持金額を入力...</string>
+
+  <!-- SettingsActivity -->
+  <string name="title_settings">Wallet - 設定</string>
+  <string name="label_settings">アカウントの設定を行うことができます。項目を設定して「送信」ボタンを押してください。</string>
+  <string name="label_settings_toggle">所持金データを一般公開する</string>
 
   <!-- ErrorActivity -->
   <string name="title_error">Wallet - エラー</string>

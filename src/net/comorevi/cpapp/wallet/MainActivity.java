@@ -31,9 +31,11 @@ public class MainActivity extends ListActivity {
             this.addButton(new Button().setText(bundle.getString("button_home3")));
             this.addButton(new Button().setText(bundle.getString("button_home4")));
             this.addButton(new Button().setText(bundle.getString("button_home5")));
+            this.addButton(new Button().setText(bundle.getString("button_home6")));
         } else {
             this.addButton(new Button().setText(bundle.getString("button_home1")));
             this.addButton(new Button().setText(bundle.getString("button_home2")));
+            this.addButton(new Button().setText(bundle.getString("button_home6")));
         }
     }
 
@@ -48,13 +50,20 @@ public class MainActivity extends ListActivity {
                 new SeeMoneyActivity(getManifest()).start(cPhone.getPlayer(), bundle.getStrings());
                 return ReturnType.TYPE_CONTINUE;
             case 2:
-                new GiveMoneyActivity(getManifest()).start(cPhone.getPlayer(), bundle.getStrings());
+                if (listResponse.getPlayer().isOp()) {
+                    new GiveMoneyActivity(getManifest()).start(cPhone.getPlayer(), bundle.getStrings());
+                } else {
+                    new SettingsActivity(getManifest()).start(cPhone.getPlayer(), bundle.getStrings());
+                }
                 return ReturnType.TYPE_CONTINUE;
             case 3:
                 new TakeMoneyActivity(getManifest()).start(cPhone.getPlayer(), bundle.getStrings());
                 return ReturnType.TYPE_CONTINUE;
             case 4:
                 new SetMoneyActivity(getManifest()).start(cPhone.getPlayer(), bundle.getStrings());
+                return ReturnType.TYPE_CONTINUE;
+            case 5:
+                new SettingsActivity(getManifest()).start(cPhone.getPlayer(), bundle.getStrings());
                 return ReturnType.TYPE_CONTINUE;
         }
 
