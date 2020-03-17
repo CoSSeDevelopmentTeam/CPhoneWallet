@@ -42,12 +42,12 @@ public class SeeMoneyActivity extends CustomActivity {
             return ReturnType.TYPE_CONTINUE;
         }
 
-        if (api.getPublishStatus(cResponse.getResult().get(1).toString()) == false) {
+        if (!cResponse.getPlayer().isOp() && !api.getPublishStatus(cResponse.getResult().get(1).toString())) {
             new ErrorActivity(getManifest(), "入力されたプレイヤーはデータを非公開にしています", this).start(cPhone.getPlayer(), bundle.getStrings());
             return ReturnType.TYPE_CONTINUE;
         }
 
         new SeeMoneyResultActivity(getManifest(), cResponse.getResult().get(1).toString(), api).start(cResponse.getPlayer(), bundle.getStrings());
-        return ReturnType.TYPE_END;
+        return ReturnType.TYPE_CONTINUE;
     }
 }

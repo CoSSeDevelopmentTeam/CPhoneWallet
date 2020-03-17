@@ -55,7 +55,7 @@ public class SetMoneyActivity extends CustomActivity {
 
         if (isPositiveNumber(input)) {
             MoneySAPI api = (MoneySAPI) SharingData.server.getPluginManager().getPlugin("MoneySAPI");
-            api.addMoney(dropdown, Integer.parseInt(input));
+            api.setMoney(dropdown, Integer.parseInt(input));
 
             if (SharingData.server.getPlayer(dropdown) != null) {
                 SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " により所持金が" + input + api.getMoneyUnit() + "に設定されました");
