@@ -54,11 +54,10 @@ public class TakeMoneyActivity extends CustomActivity {
         String input = cResponse.getResult().get(2).toString();
 
         if (isPositiveNumber(input)) {
-            MoneySAPI api = (MoneySAPI) SharingData.server.getPluginManager().getPlugin("MoneySAPI");
-            api.reduceMoney(dropdown, Integer.parseInt(input));
+            MoneySAPI.getInstance().reduceMoney(dropdown, Integer.parseInt(input));
 
             if (SharingData.server.getPlayer(dropdown) != null) {
-                SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " により" + input + api.getMoneyUnit() + "所持金を減らされました");
+                SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " により" + input + MoneySAPI.UNIT + "所持金を減らされました");
             }
             this.cPhone.setHomeMessage(TextFormat.AQUA + "お金を没収しました");
         } else {

@@ -15,7 +15,6 @@ import net.comorevi.cphone.cphone.widget.element.Label;
 import net.comorevi.cphone.presenter.SharingData;
 import net.comorevi.moneyapi.MoneySAPI;
 
-import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -54,11 +53,10 @@ public class GiveMoneyActivity extends CustomActivity {
         String input = cResponse.getResult().get(2).toString();
 
         if (isPositiveNumber(input)) {
-            MoneySAPI api = (MoneySAPI) SharingData.server.getPluginManager().getPlugin("MoneySAPI");
-            api.addMoney(dropdown, Integer.parseInt(input));
+            MoneySAPI.getInstance().addMoney(dropdown, Integer.parseInt(input));
 
             if (SharingData.server.getPlayer(dropdown) != null) {
-                SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " より" + input + api.getMoneyUnit() + "付与されました");
+                SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " より" + input + MoneySAPI.UNIT + "付与されました");
             }
             this.cPhone.setHomeMessage(TextFormat.AQUA + "お金を付与しました");
         } else {

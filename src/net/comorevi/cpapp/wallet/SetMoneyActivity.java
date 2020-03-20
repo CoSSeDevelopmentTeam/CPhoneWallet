@@ -54,11 +54,10 @@ public class SetMoneyActivity extends CustomActivity {
         String input = cResponse.getResult().get(2).toString();
 
         if (isPositiveNumber(input)) {
-            MoneySAPI api = (MoneySAPI) SharingData.server.getPluginManager().getPlugin("MoneySAPI");
-            api.setMoney(dropdown, Integer.parseInt(input));
+            MoneySAPI.getInstance().setMoney(dropdown, Integer.parseInt(input));
 
             if (SharingData.server.getPlayer(dropdown) != null) {
-                SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " により所持金が" + input + api.getMoneyUnit() + "に設定されました");
+                SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " により所持金が" + input + MoneySAPI.UNIT + "に設定されました");
             }
             this.cPhone.setHomeMessage(TextFormat.AQUA + "所持金を設定しました");
         } else {

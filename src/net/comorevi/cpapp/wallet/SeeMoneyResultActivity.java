@@ -11,18 +11,16 @@ import net.comorevi.moneyapi.MoneySAPI;
 public class SeeMoneyResultActivity extends CustomActivity {
 
     private String name;
-    private MoneySAPI api;
 
-    public SeeMoneyResultActivity(ApplicationManifest manifest, String name, MoneySAPI api) {
+    public SeeMoneyResultActivity(ApplicationManifest manifest, String name) {
         super(manifest);
         this.name = name;
-        this.api = api;
     }
 
     @Override
     public void onCreate(Bundle bundle) {
         this.setTitle(bundle.getString("title_see_result"));
-        String replacedString = bundle.getString("label_see_result").replace("%1", name).replace("%2", String.valueOf(api.getMoney(name))).replace("%3", api.getMoneyUnit());
+        String replacedString = bundle.getString("label_see_result").replace("%1", name).replace("%2", String.valueOf(MoneySAPI.getInstance().getMoney(name))).replace("%3", MoneySAPI.UNIT);
         this.addFormElement(new Label(replacedString));
     }
 

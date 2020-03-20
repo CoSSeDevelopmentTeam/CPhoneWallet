@@ -14,7 +14,7 @@ import net.comorevi.cphone.cphone.widget.element.Input;
 import net.comorevi.cphone.cphone.widget.element.Label;
 import net.comorevi.cphone.presenter.SharingData;
 import net.comorevi.moneyapi.MoneySAPI;
-import net.comorevi.moneyapi.TAXType;
+import net.comorevi.moneyapi.util.TAXType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,11 +55,10 @@ public class PayMoneyActivity extends CustomActivity {
         String input = cResponse.getResult().get(2).toString();
 
         if (isPositiveNumber(input)) {
-            MoneySAPI api = (MoneySAPI) SharingData.server.getPluginManager().getPlugin("MoneySAPI");
-            if (api.isPayable(cResponse.getPlayer().getName(), Integer.parseInt(input))) {
-                api.payMoney(cResponse.getPlayer().getName(), dropdown, Integer.parseInt(input), TAXType.PAY);
+            if (MoneySAPI.getInstance().isPayable(cResponse.getPlayer().getName(), Integer.parseInt(input))) {
+                MoneySAPI.getInstance().payMoney(cResponse.getPlayer().getName(), dropdown, Integer.parseInt(input), TAXType.PAY);
                 if (SharingData.server.getPlayer(dropdown) != null) {
-                    SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " より" + input + api.getMoneyUnit() + "の支払いがありました");
+                    SharingData.server.getPlayer(dropdown).sendMessage("システム>>WalletApp>>\n - " + cResponse.getPlayer().getName() + " より" + input + MoneySAPI.UNIT + "の支払いがありました");
                 }
                 this.cPhone.setHomeMessage(TextFormat.AQUA + "支払いを完了しました");
             } else {
