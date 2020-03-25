@@ -4,11 +4,11 @@
 <manifest>
     <application>
         <title>Wallet</title>
-        <description>お金関連のアプリ</description>
+        <description>お金に関連する操作ができるアプリ</description>
         <author>popkechupki</author>
-        <version>1.0.1</version>
-        <mcbeversion>1.7</mcbeversion>
-        <icon>https://google.co.jp/</icon>
+        <version>1.1.0</version>
+        <mcbeversion>1.14</mcbeversion>
+        <icon>https://info.comorevi.net/images/favicon/logo_transparent.png</icon>
     </application>
 
     <permission type = "default" />
@@ -17,4 +17,15 @@
         <name>MainActivity</name>
         <main>net.comorevi.cpapp.wallet.MainActivity</main>
     </activity>
+
+    <external-lang>
+        <lang region="en">
+            <title>Wallet</title>
+            <description>This is wallet application for cphone.</description>
+        </lang>
+        <lang region="ja">
+            <title>ウォレット/Wallet</title>
+            <description>これはしふぉん向けのお財布アプリケーションです。</description>
+        </lang>
+    </external-lang>
 </manifest>
