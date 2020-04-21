@@ -4,10 +4,11 @@
   <string name="content_home">希望する操作を選択してください</string>
   <string name="button_home1">送金/支払い</string>
   <string name="button_home2">所持金確認</string>
-  <string name="button_home3">お金を付与(OP only)</string>
-  <string name="button_home4">お金を没収(OP only)</string>
-  <string name="button_home5">所持金を再設定(OP only)</string>
-  <string name="button_home6">アカウント設定</string>
+  <string name="button_home3">コインとMSを両替</string>
+  <string name="button_home4">お金を付与(OP only)</string>
+  <string name="button_home5">お金を没収(OP only)</string>
+  <string name="button_home6">所持金を再設定(OP only)</string>
+  <string name="button_home7">アカウント設定</string>
 
   <!-- PayMoneyActivity -->
   <string name="title_pay">Wallet - 送金・支払い</string>
@@ -26,6 +27,23 @@
   <!-- SeeMoneyResultActivity -->
   <string name="title_see_result">Wallet - 所持金確認(他プレイヤー)</string>
   <string name="label_see_result">%1さんの所持金は%2%3です</string>
+
+  <!-- ExchangeActivity -->
+  <string name="title_exchange">Wallet - 両替</string>
+  <string name="label_exchange1">コインからMSへの両替か、MSからコインへの両替かを選択してください。</string>
+  <string name="text_exchange_dropdown">両替内容</string>
+  <string name="content_exchange_dropdown0">コインからMSへ</string>
+  <string name="content_exchange_dropdown1">MSからコインへ(月曜日限定)</string>
+  <string name="label_exchange2">取引を行う量を入力してください。&#xA;入力例) コインからMSへ: 100(coin)&#xA;現在保有している資産は以下の通りです。</string>
+  <string name="text_exchange_input">取引量</string>
+  <string name="exchange_input_placeholder">取引量を入力してください...</string>
+  <string name="exchange_completed">両替を行いました。</string>
+  <string name="error_exchange">適切な値を入力してください。</string>
+  <string name="error_exchange1">コインを保有していません。</string>
+  <string name="error_exchange2">保有コインが不足しています。</string>
+  <string name="error_exchange3">取引量が少なすぎます。</string>
+  <string name="error_exchange4">所持金が不足しています。</string>
+  <string name="error_exchange5">MSからコインへの交換は日曜日のみ行えます。</string>
 
   <!-- GiveMoneyActivity -->
   <string name="title_give">Wallet - 所持金追加(OP only)</string>
