@@ -1,7 +1,7 @@
 <strings>
   <!-- MainActivity -->
   <string name="title_home">Wallet - Home</string>
-  <string name="content_home">希望する操作を選択してください</string>
+  <string name="content_home">希望する操作を選択してください。&#xA;現在の保有資産: </string>
   <string name="button_home1">送金/支払い</string>
   <string name="button_home2">所持金確認</string>
   <string name="button_home3">コインとMSを両替</string>
@@ -33,8 +33,8 @@
   <string name="label_exchange1">コインからMSへの両替か、MSからコインへの両替かを選択してください。</string>
   <string name="text_exchange_dropdown">両替内容</string>
   <string name="content_exchange_dropdown0">コインからMSへ</string>
-  <string name="content_exchange_dropdown1">MSからコインへ(月曜日限定)</string>
-  <string name="label_exchange2">取引を行う量を入力してください。&#xA;入力例) コインからMSへ: 100(coin)&#xA;現在保有している資産は以下の通りです。</string>
+  <string name="content_exchange_dropdown1">MSからコインへ(日曜日限定)</string>
+  <string name="label_exchange2">取引を行う量を入力してください。&#xA;入力例) コインからMSへ: 100&#xA;      (→100coin分がMSに両替され余分は残ります。)&#xA;現在保有している資産は以下の通りです。</string>
   <string name="text_exchange_input">取引量</string>
   <string name="exchange_input_placeholder">取引量を入力してください...</string>
   <string name="exchange_completed">両替を行いました。</string>

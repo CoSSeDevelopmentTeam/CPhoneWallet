@@ -72,7 +72,7 @@ public class ExchangeActivity extends CustomActivity {
             if (MoneySAPI.getInstance().getMoney(cResponse.getPlayer()) < Integer.parseInt(cResponse.getResult().get(3).toString())) {
                 new MessageActivity(getManifest(), bundle.getString("title_error"), bundle.getString("error_exchange4"), bundle.getString("button_error1"), bundle.getString("button_error2"), new ExchangeActivity(getManifest())).start(bundle);
                 return ReturnType.TYPE_CONTINUE;
-            } else if (Calendar.getInstance(TimeZone.getTimeZone("Tokyo/Asia")).get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY) {
+            } else if (Calendar.getInstance(TimeZone.getTimeZone("Asia/Tokyo")).get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY) {
                 new MessageActivity(getManifest(), bundle.getString("title_error"), bundle.getString("error_exchange5"), bundle.getString("button_error1"), bundle.getString("button_error2"), new ExchangeActivity(getManifest())).start(bundle);
                 return ReturnType.TYPE_CONTINUE;
             }

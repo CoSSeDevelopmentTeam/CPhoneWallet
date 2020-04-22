@@ -8,6 +8,7 @@ import net.comorevi.cphone.cphone.model.Response;
 import net.comorevi.cphone.cphone.widget.activity.ReturnType;
 import net.comorevi.cphone.cphone.widget.activity.base.ListActivity;
 import net.comorevi.cphone.cphone.widget.element.Button;
+import net.comorevi.moneyapi.MoneySAPI;
 
 public class MainActivity extends ListActivity {
 
@@ -23,7 +24,7 @@ public class MainActivity extends ListActivity {
         this.bundle = bundle;
         this.cPhone = bundle.getCPhone();
         this.setTitle(bundle.getString("title_home"));
-        this.setContent(bundle.getString("content_home"));
+        this.setContent(bundle.getString("content_home") + MoneySAPI.getInstance().getMoney(cPhone.getPlayer()) + MoneySAPI.UNIT + ", " + MoneySAPI.getInstance().getCoin(cPhone.getPlayer()) + "coin");
 
         if (cPhone.getPlayer().isOp()) {
             this.addButton(new Button().setText(bundle.getString("button_home1")));
