@@ -9,7 +9,7 @@ import net.comorevi.cphone.cphone.widget.activity.ReturnType;
 import net.comorevi.cphone.cphone.widget.activity.base.CustomActivity;
 import net.comorevi.cphone.cphone.widget.element.Input;
 import net.comorevi.cphone.cphone.widget.element.Label;
-import net.comorevi.moneyapi.MoneySAPI;
+import net.comorevi.np.moneys.MoneySAPI;
 
 public class SeeMoneyActivity extends CustomActivity {
 

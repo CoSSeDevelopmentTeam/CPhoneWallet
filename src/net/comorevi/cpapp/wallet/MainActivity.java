@@ -8,7 +8,7 @@ import net.comorevi.cphone.cphone.model.Response;
 import net.comorevi.cphone.cphone.widget.activity.ReturnType;
 import net.comorevi.cphone.cphone.widget.activity.base.ListActivity;
 import net.comorevi.cphone.cphone.widget.element.Button;
-import net.comorevi.moneyapi.MoneySAPI;
+import net.comorevi.np.moneys.MoneySAPI;
 
 public class MainActivity extends ListActivity {
 

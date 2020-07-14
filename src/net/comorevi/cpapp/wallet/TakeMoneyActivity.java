@@ -13,7 +13,7 @@ import net.comorevi.cphone.cphone.widget.element.Dropdown;
 import net.comorevi.cphone.cphone.widget.element.Input;
 import net.comorevi.cphone.cphone.widget.element.Label;
 import net.comorevi.cphone.presenter.SharingData;
-import net.comorevi.moneyapi.MoneySAPI;
+import net.comorevi.np.moneys.MoneySAPI;
 
 import java.util.ArrayList;
 import java.util.List;
